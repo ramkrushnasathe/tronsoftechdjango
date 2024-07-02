@@ -1,0 +1,34 @@
+{% extends 'master.html' %}
+
+{% block title %}
+    buydata
+{% endblock title%}
+
+{% block body %}
+<body>
+    <center><h2 style="color:red;font-size:25px; font-weight: bold; margin-top: 10px;">BUYING HISTORY</h2></center>
+    {% for i in buydata %}
+        <div style="min-height: 40%; width:100%; display: flex;flex-direction: column; justify-content: center;align-items: center;  ">
+            <div style="height:300px; width:90%; border: 2px solid red; border-radius:20px; background-color: rgb(199, 192, 182);">
+                <div style="height:100%; width:50%; float: left; padding:10px;">
+                          <center><img src="{{i.buyimage}}" alt="" style="height:100%; width:60%;border-radius:20px;" ></center>
+                </div>
+                <div style="height:100%; width:50%; float: left; padding:25px; ">
+                    <a href="{% url 'mobile1'%}" style="font-size: 25px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">{{i.buyinfo}}</a>
+                    <h6 style="color: rgb(255, 0, 0); font-size:25px;">Order completed</h6>
+                    <h6 style="color: black; font-size:25px;">Thank You Visit Our Site Again</h6>
+
+            
+                </div>
+
+            </div>
+
+        </div>
+
+    {% endfor %}
+    <center><h6 style="color: black; font-size:35px; text-shadow:2px 2px 5px black; color:red;">Thank You Visit Our Site Again</h6></center>
+
+
+    
+</body>
+{% endblock body %}

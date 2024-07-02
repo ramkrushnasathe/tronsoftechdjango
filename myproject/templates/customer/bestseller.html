@@ -1,0 +1,378 @@
+{% extends 'master.html' %}
+
+{% block title %}
+       bestseller
+{% endblock title %}
+
+{% block body %}
+<body>
+       
+       <div style="height:100%; width:100%; overflow-y: auto;">
+              <div style="height:100px; width:100%;">
+                     <h1 style="font-size: 50px;font-weight: bold;font-family: 'Arial Black', Gadget, sans-serif; margin-right:10px; padding-left:10px;"><b>Amazon Bestsellers</b></h1>
+                     <h6 style="padding-left: 10px; color: rgb(108, 103, 103);">Our most popular products based on sales. Updated frequently.</h6>
+              </div>
+              <div style="height:100%; width:15%; float: left; border-right: 1px solid rgb(124, 116, 116);">
+                     <h6 style="padding:20px;"><b>Any Department</b></h6>
+                     <h6 style="margin-left:25px;"><a href="" style="text-decoration:none; color: rgb(73, 68, 68); padding:25px;" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Amazon launchpad</a></h6>
+                     <h6 style="margin-left:25px;"><a href="" style="text-decoration:none;color: rgb(73, 68, 68);padding:25px;"onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Baby Product</a></h6>
+                     <h6 style="margin-left:25px;"><a href="" style="text-decoration:none;color: rgb(73, 68, 68); padding:25px;"onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Bag,Wallet</a></h6>
+                     <h6 style="margin-left:25px;"><a href="" style="text-decoration:none;color: rgb(73, 68, 68);padding:25px;"onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Beauty</a></h6>
+                     <h6 style="margin-left:25px;"><a href="" style="text-decoration:none;color: rgb(73, 68, 68);padding:25px;"onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Car moterbike</a></h6>
+                     <h6 style="margin-left:25px;"><a href="" style="text-decoration:none;color: rgb(73, 68, 68);padding:25px;"onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Mobile acceseries</a></h6>
+                     <h6 style="margin-left:25px;"><a href="" style="text-decoration:none;color: rgb(73, 68, 68);padding:25px;"onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">computer acceseries</a></h6>
+                     <h6 style="margin-left:25px;"><a href="" style="text-decoration:none;color: rgb(73, 68, 68);padding:25px;"onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">clothing acceseries</a></h6>
+                     <h6 style="margin-left:25px;"><a href="" style="text-decoration:none;color: rgb(73, 68, 68);padding:25px;"onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">cards and gifts</a></h6>
+                     <h6 style="margin-left:25px;"><a href="" style="text-decoration:none;color: rgb(73, 68, 68);padding:25px;"onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Garden & outdoor</a></h6>
+                     <h6 style="margin-left:25px;"><a href="" style="text-decoration:none;color: rgb(73, 68, 68);padding:25px;"onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Health & Personal</a></h6>
+                     <h6 style="margin-left:25px;"><a href="" style="text-decoration:none;color: rgb(73, 68, 68);padding:25px;"onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">home & kitchen</a></h6>
+                     <h6 style="margin-left:25px;"><a href="" style="text-decoration:none;color: rgb(73, 68, 68);padding:25px;"onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">men & women</a></h6>
+
+              </div> 
+              <div style="height: 100%; width:85%; float: left;">
+                     
+                     <div style="height:350px; width:100%;">
+                            <div style="height:50px; width:100%; text-align: left;">
+                                   <h6 style="padding-left:20px; font-size:25px;"><b>Bestsellers in Electronics</b><a href="" style="font-size:13px;padding-left: 10px;">see more</a></h6>
+                                   
+
+                            </div>
+
+
+
+                            <div style="height:300px;width:20%;margin-left: 4%; float: left;" onclick="redirectmobile1page()">
+                                   <div style="height:50%;width:100%;" onclick="redirectmobile1page()">
+                                          <img src="https://images-eu.ssl-images-amazon.com/images/I/61luwQe5iiL._AC_UL450_SR450,320_.jpg" alt="" style="height:100%; width:100%;">
+
+                                   </div>
+                                   <div style="height: 50px; width:100%;" onclick="redirectmobile1page()">
+                                          <a href="{% url 'mobile1'%}" style="font-size: 15px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">TECNO POP 8 (Gravity Black,(4GB+64GB)| 90Hz Punch Hole Display with Dynamic Port & Dual Speakers with DTS| 5000mAh Battery |10W Type-C| Side Fingerprint Sensor| Octa-Core Processor</a>
+                                           <h6 style="color: rgb(255, 0, 0);">₹ 6,999.00</h6>
+                                   </div>
+
+                            </div>
+
+
+                            <div style="height:300px;width:20%;margin-left: 4%; float: left; "onclick="redirectmobile2page()">
+                                   <div style="height:50%;width:100%;" onclick="redirectmobile2page()">
+                                          <img src="https://images-eu.ssl-images-amazon.com/images/I/71VwgEu6N6L._AC_UL450_SR450,320_.jpg" alt="" style="height:100%; width:100%;">
+
+                                   </div>
+                                   <div style="height: 50px; width:100%;" onclick="redirectmobile2page()">
+                                          <a href="{% url 'mobile2' %}" style="font-size: 15px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">realme NARZO 70 Pro 5G (Glass Gold, 8GB RAM,256GB Storage) Dimensity 7050 5G Chipset | Horizon Glass Design | Segment 1st Flagship Sony IMX890 OIS Camera</a>
+                                           <h6 style="color: rgb(255, 0, 0);">₹ 21,999.00</h6>
+                                   </div>
+       
+                            </div>
+
+
+                            <div style="height:300px;width:20%;margin-left: 4%; float: left;" onclick="redirectmobile3page()">
+                                   <div style="height:50%;width:100%;" onclick="redirectmobile3page()">
+                                          <img src="https://images-eu.ssl-images-amazon.com/images/I/71-ZHpmFzDL._AC_UL450_SR450,320_.jpg" alt="" style="height:100%; width:100%;">
+
+                                   </div>
+                                   <div style="height: 50px; width:100%;" onclick="redirectmobile3page()">
+                                          <a href="{%url 'mobile3'%}" style="font-size: 15px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">realme NARZO 70 Pro 5G (Glass Green, 8GB RAM,256GB Storage) Dimensity 7050 5G Chipset | Horizon Glass Design | Segment 1st Flagship Sony IMX890 OIS Camera</a>
+                                           <h6 style="color: rgb(255, 0, 0);">₹ 21,999.00</h6>
+                                   </div>
+       
+                            </div>
+
+
+                            <div style="height:300px;width:20%;margin-left: 4%; float: left;" onclick="redirectmobile4page()">
+                                   <div style="height:50%;width:100%;" onclick="redirectmobile4page()">
+                                          <img src="https://images-eu.ssl-images-amazon.com/images/I/71ocQY+G2XL._AC_UL450_SR450,320_.jpg" alt="" style="height:100%; width:100%;">
+
+                                   </div>
+                                   <div style="height: 50px; width:100%;" onclick="redirectmobile4page()">
+                                          <a href="{% url 'mobile4'%}" style="font-size: 15px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">realme NARZO N65 5G (Amber Gold 6GB RAM, 128GB Storage) India's 1st D6300 5G Chipset | Ultra Slim Design | 120Hz Eye Comfort Display | 50MP AI Camera| Charger in The box</a>
+                                           <h6 style="color: rgb(255, 0, 0);">₹ 12,498.00</h6>
+                                   </div>
+       
+                            </div>
+       
+
+                     </div>
+
+
+
+
+
+                     <div style="height:350px; width:100%;">
+                            <div style="height:50px; width:100%; text-align: left;">
+                                   <h6 style="padding-left:20px; font-size:25px;"><b>Bestsellers in Clothing & Accessories</b><a href="" style="font-size:13px;padding-left: 10px;">see more</a></h6>
+                                   
+
+                            </div>
+
+
+
+                            <div style="height:300;width:20%;margin-left: 4%; float: left;" onclick="redirectclothes1page()">
+                                   <div style="height:50%;width:100%;" onclick="redirectclothes1page()">
+                                          <img src="https://images-eu.ssl-images-amazon.com/images/I/51rgGjt-lnL._AC_UL450_SR450,320_.jpg" alt="" style="height:100%; width:100%;">
+
+                                   </div>
+                                   <div style="height: 50px; width:100%;" onclick="redirectclothes1page()">
+                                          <a href="{% url 'clothes1' %}" style="font-size: 15px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">GRECIILOOKS Track Pant for Men</a>
+                                           <h6 style="color: rgb(255, 0, 0);">₹ 479.00</h6>
+                                   </div>
+
+                            </div>
+
+
+                            <div style="height:300px;width:20%;margin-left: 4%; float: left;" onclick="redirectclothes2page()">
+                                   <div style="height:50%;width:100%;" onclick="redirectclothes2page()">
+                                          <img src="https://images-eu.ssl-images-amazon.com/images/I/71BLkd39VKL._AC_UL450_SR450,320_.jpg" alt="" style="height:100%; width:100%;">
+
+                                   </div>
+                                   <div style="height: 50px; width:100%;" onclick="redirectclothes2page()">
+                                          <a href="{% url 'clothes2' %}" style="font-size: 15px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">ANNI DESIGNER Women's Cotton Blend Straight Printed Kurta with Palazzo</a>
+                                           <h6 style="color: rgb(255, 0, 0);">₹ 489.00</h6>
+                                   </div>
+       
+                            </div>
+
+
+                            <div style="height:300px;width:20%;margin-left: 4%; float: left;" onclick="redirectclothes3page()">
+                                   <div style="height:50%;width:100%;" onclick="redirectclothes3page()">
+                                          <img src="https://images-eu.ssl-images-amazon.com/images/I/51uSxAeuAkL._AC_UL450_SR450,320_.jpg" alt="" style="height:100%; width:100%;">
+
+                                   </div>
+                                   <div style="height: 50px; width:100%;" onclick="redirectclothes3page()">
+                                          <a href="{% url 'clothes3'%}" style="font-size: 15px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Lux Cozi Men's Regular Fit Polo Neck Half Sleeve Solid Casual T-Shirt | Polo T-Shirt for Men</a>
+                                           <h6 style="color: rgb(255, 0, 0);">₹ 348.00</h6>
+                                   </div>
+       
+                            </div>
+
+
+                            <div style="height:300px;width:20%;margin-left: 4%; float: left;" onclick="redirectclothes4page()">
+                                   <div style="height:50%;width:100%;" onclick="redirectclothes4page()">
+                                          <img src="https://images-eu.ssl-images-amazon.com/images/I/81MfjxIbRsL._AC_UL450_SR450,320_.jpg" alt="" style="height:100%; width:100%;">
+
+                                   </div>
+                                   <div style="height: 50px; width:100%;" onclick="redirectclothes4page()">
+                                          <a href="{% url 'clothes4' %}" style="font-size: 15px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Jockey 8820 Men's Super Combed Cotton Round Neck Sleeveless Vest with Extended Length for Easy Tuck (Pack of 3)</a>
+                                           <h6 style="color: rgb(255, 0, 0);">₹ 626.00</h6>
+                                   </div>
+       
+                            </div>
+       
+
+                     </div>
+
+
+
+
+
+                     <div style="height:350px; width:100%;">
+                            <div style="height:50px; width:100%; text-align: left;">
+                                   <h6 style="padding-left:20px; font-size:25px;"><b>Bestsellers in Beauty</b><a href="" style="font-size:13px;padding-left: 10px;">see more</a></h6>
+                                   
+
+                            </div>
+
+
+
+                            <div style="height:300;width:20%;margin-left: 4%; float: left;" onclick="redirectbeauty1page()">
+                                   <div style="height:50%;width:100%;" onclick="redirectbeauty1page()">
+                                          <img src="https://images-eu.ssl-images-amazon.com/images/I/71t9JRry+3L._AC_UL450_SR450,320_.jpg" alt="" style="height:100%; width:100%;">
+
+                                   </div>
+                                   <div style="height: 50px; width:100%;" onclick="redirectbeauty1page()">
+                                          <a href="{%url 'beauty1' %}" style="font-size: 15px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Cetaphil Face Wash Gentle Skin Cleanser for Dry to Normal, Sensitive Skin, 125 ml Hydrating Face Wash with Niacinamide, Vitamin B5</a>
+                                           <h6 style="color: rgb(255, 0, 0);">₹ 335.00</h6>
+                                   </div>
+
+                            </div>
+
+
+                            <div style="height:300px;width:20%;margin-left: 4%; float: left;" onclick="redirectbeauty2page()">
+                                   <div style="height:50%;width:100%;" onclick="redirectbeauty2page()">
+                                          <img src="https://images-eu.ssl-images-amazon.com/images/I/51x3cj+-iUL._AC_UL450_SR450,320_.jpg" alt="" style="height:100%; width:100%;">
+
+                                   </div>
+                                   <div style="height: 50px; width:100%;" onclick="redirectbeauty2page()">
+                                          <a href="{% url 'beauty2' %}" style="font-size: 15px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">The Derma Co Hyaluronic Sunscreen Aqua Ultra Light Gel With Spf 50 Pa++++ For Broad Spectrum, UV A, UV B & Blue Light Protection For Oily Skin - 50G(Dermaco), Pack Of 1</a>
+                                           <h6 style="color: rgb(255, 0, 0);">₹ 448.00</h6>
+                                   </div>
+       
+                            </div>
+
+
+                            <div style="height:300px;width:20%;margin-left: 4%; float: left;" onclick="redirectbeauty3page()">
+                                   <div style="height:50%;width:100%;" onclick="redirectbeauty3page()">
+                                          <img src="https://images-eu.ssl-images-amazon.com/images/I/61wHkCENFtL._AC_UL450_SR450,320_.jpg" alt="" style="height:100%; width:100%;">
+
+                                   </div>
+                                   <div style="height: 50px; width:100%;" onclick="redirectbeauty3page()">
+                                          <a href="{% url 'beauty3'%}" style="font-size: 15px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">L'Oreal Paris Permanent Hair Colour, Radiant At-Home Hair Colour with up to 100% Grey Coverage, Pro-Keratin, Up to 8 Weeks of Colour, Excellence Crème, 3 Dark Brown, 72ml+100g</a>
+                                           <h6 style="color: rgb(255, 0, 0);">₹ 524.00</h6>
+                                   </div>
+       
+                            </div>
+
+
+                            <div style="height:300px;width:20%;margin-left: 4%; float: left;" onclick="redirectbeauty4page()">
+                                   <div style="height:50%;width:100%;" onclick="redirectbeauty4page()">
+                                          <img src="https://images-eu.ssl-images-amazon.com/images/I/51lV2Pem64L._AC_UL450_SR450,320_.jpg" alt="" style="height:100%; width:100%;">
+
+                                   </div>
+                                   <div style="height: 50px; width:100%;" onclick="redirectbeauty4page()">
+                                          <a href="{% url 'beauty4'%}" style="font-size: 15px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Simple Kind To Skin Refreshing Facial Wash 150 ml | 100% Soap-Free Facewash that doesn't dry out your skin| For All Skin Types</a>
+                                           <h6 style="color: rgb(255, 0, 0);">₹ 319.00</h6>
+                                   </div>
+       
+                            </div>
+       
+
+                     </div>
+
+
+
+
+
+                     <div style="height:350px; width:100%;">
+                            <div style="height:50px; width:100%; text-align: left;">
+                                   <h6 style="padding-left:20px; font-size:25px;"><b>Bestsellers in Bag's wallets and luggege</b><a href="" style="font-size:13px;padding-left: 10px;">see more</a></h6>
+                                   
+
+                            </div>
+
+
+
+                            <div style="height:300;width:20%;margin-left: 4%; float: left;" onclick="redirectbags1page()">
+                                   <div style="height:50%;width:100%;" onclick="redirectbags1page()">
+                                          <img src="https://images-eu.ssl-images-amazon.com/images/I/61piNi70giL._AC_UL450_SR450,320_.jpg" alt="" style="height:100%; width:100%;">
+
+                                   </div>
+                                   <div style="height: 50px; width:100%;" onclick="redirectbags1page()">
+                                          <a href="{%url 'bags1'%}" style="font-size: 15px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Safari Polypropylene (Pp) Pentagon Hardside Small Size Cabin Luggage Suitcase 4 Spinner Wheels Trolley Bags for Travel Black Color 55 Cm</a>
+                                           <h6 style="color: rgb(255, 0, 0);">₹ 1599.00</h6>
+                                   </div>
+
+                            </div>
+
+
+                            <div style="height:300px;width:20%;margin-left: 4%; float: left;" onclick="redirectbags2page()">
+                                   <div style="height:50%;width:100%;" onclick="redirectbags2page()">
+                                          <img src="https://images-eu.ssl-images-amazon.com/images/I/61AFLXzsCyL._AC_UL450_SR450,320_.jpg" alt="" style="height:100%; width:100%;">
+
+                                   </div>
+                                   <div style="height: 50px; width:100%;" onclick="redirectbags2page()">
+                                          <a href="{%url 'bags2' %}" style="font-size: 15px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Rylan Umbrella Automatic Open Travel Umbrella with Wind Vent,Umbrella big size for men, Umbrella for girls, Umbrellas for rain,Windproof Umberalla Large for Man,Women</a>
+                                           <h6 style="color: rgb(255, 0, 0);">₹ 448.00</h6>
+                                   </div>
+       
+                            </div>
+
+
+                            <div style="height:300px;width:20%;margin-left: 4%; float: left;" onclick="redirectbags3page()">
+                                   <div style="height:50%;width:100%;" onclick="redirectbags3page()">
+                                          <img src="https://images-eu.ssl-images-amazon.com/images/I/71CeIYFdrTL._AC_UL450_SR450,320_.jpg" alt="" style="height:100%; width:100%;">
+
+                                   </div>
+                                   <div style="height: 50px; width:100%;" onclick="redirectbags3page()">
+                                          <a href="{% url 'bags3'%}" style="font-size: 15px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Safari THORIUMNEO554WGLU 8 Wheels 55 Cm Small Cabin Trolley Bag Hard Case Polycarbonate 360 Degree Wheeling System Luggage, Trolley Bags for Travel, Speed_Wheel Suitcase for Travel, Graphite Blue</a>
+                                           <h6 style="color: rgb(255, 0, 0);">₹ 1,999.00</h6>
+                                   </div>
+       
+                            </div>
+
+
+                            <div style="height:300px;width:20%;margin-left: 4%; float: left;" onclick="redirectbags4page()">
+                                   <div style="height:50%;width:100%;" onclick="redirectbags4page()">
+                                          <img src="https://images-eu.ssl-images-amazon.com/images/I/810s53kR8tL._AC_UL450_SR450,320_.jpg" alt="" style="height:100%; width:100%;">
+
+                                   </div>
+                                   <div style="height: 50px; width:100%;" onclick="redirectbags4page()">
+                                          <a href="{% url 'bags4'%}" style="font-size: 15px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Skybags Casual Backpack 28L, 2 Main Compartments, Bottle Pocket, Front Pocket, Padded Shoulder Strap</a>
+                                           <h6 style="color: rgb(255, 0, 0);">₹ 549.00</h6>
+                                   </div>
+       
+                            </div>
+       
+
+                     </div>
+              </div>
+              
+
+       </div>
+
+       <Script>
+              
+              function redirectmobile1page(){
+                     var mobile1 = "{% url 'mobile1'%}"
+                     window.location.href = mobile1
+              }
+              // mobile
+              function redirectmobile2page(){
+                     var mobile2 = "{% url 'mobile2'%}"
+                     window.location.href = mobile2
+              }
+              function redirectmobile3page(){
+                     var mobile3 = "{% url 'mobile3'%}"
+                     window.location.href = mobile3
+              }
+              function redirectmobile4page(){
+                     var mobile4 = "{% url 'mobile4'%}"
+                     window.location.href = mobile4
+              }
+       //      clothes
+              function redirectclothes1page(){
+                     var clothes1 = "{% url 'clothes1'%}"
+                     window.location.href = clothes1
+              }
+              function redirectclothes2page(){
+                     var clothes2 = "{% url 'clothes2'%}"
+                     window.location.href = clothes2
+              }
+              function redirectclothes3page(){
+                     var clothes3 = "{% url 'clothes3'%}"
+                     window.location.href = clothes3
+              }
+              function redirectclothes4page(){
+                     var clothes4 = "{% url 'clothes4'%}"
+                     window.location.href = clothes4
+              }
+              // beauty
+
+              function redirectbeauty1page(){
+                     var beauty1 = "{% url 'beauty1'%}"
+                     window.location.href = beauty1
+              }
+              function redirectbeauty2page(){
+                     var beauty2 = "{% url 'beauty2'%}"
+                     window.location.href = beauty2
+              }
+              function redirectbeauty3page(){
+                     var beauty3 = "{% url 'beauty3'%}"
+                     window.location.href = beauty3
+              }
+              function redirectbeauty4page(){
+                     var beauty4 = "{% url 'beauty4'%}"
+                     window.location.href = beauty4
+              }
+
+              // bags
+              function redirectbags1page(){
+                     var bags1 = "{% url 'bags1'%}"
+                     window.location.href = bags1
+              }
+              function redirectbags2page(){
+                     var bags2 = "{% url 'bags2'%}"
+                     window.location.href = bags2
+              }
+              function redirectbags3page(){
+                     var bags3 = "{% url 'bags3'%}"
+                     window.location.href = bags3
+              }
+              function redirectbags4page(){
+                     var bags4 = "{% url 'bags4'%}"
+                     window.location.href = bags4
+              }
+              
+       </Script>
+</body> 
+
+{% endblock body %}

@@ -1,0 +1,212 @@
+
+{% load static %}
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
+        <title>
+        {% block title %}
+            
+        {% endblock title %}
+        </title>
+         {% load static %}
+         <link rel="stylesheet" href="{% static 'css/toggle.css'%}">
+        <style>
+            .clickable-box {
+                width: 250px;
+                height: 100%;
+                /* background-color: #f0f0f0; */
+                /* padding: 20px; */
+                /* border: 1px solid #ccc; */
+                /* text-align: center; */
+                cursor: pointer; /* Change cursor to pointer on hover */
+                /* margin: 10px; */
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: rgb(7, 7, 7); height: 75px;">
+            <div style="height:50px; width: 200px;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';">
+                   <img src="https://i.pinimg.com/originals/47/b7/bd/47b7bdac4285ee24654ca7d68cf06351.png" alt="" style="height:100%; width:100%;">
+            </div>
+            <div class="clickable-box", onclick=""      style="height:100%; width:250px; color: white; margin-left:10px; padding-left:5px;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';" >
+                Delivering to New Delhi 110043
+                <b>Update location</b>
+
+            </div>
+            <div style="height:100%; width:800px; margin-top:20px; margin-left:10px;">
+                
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"  onmouseover="this.style.backgroundColor='#ADD8E6';" onmouseout="this.style.backgroundColor='#FFA500';" style="color: white;border-color: white;">Search</button>
+                </form>
+            </div>
+            <div style="height:100%; width:120px; color: white; margin-left: 20px; padding-left:5px;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';" class="clickable-box" onclick="redirectloginpage()">
+                hello,sign in &nbsp;
+                <b>Account&Lists</b>
+
+            </div>
+            <div style="height:100%; width:80px; color: white; margin-left: 12px; padding-left: 5px;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';" >
+                Return&nbsp;&nbsp;
+                <b>&Orders</b>
+
+            </div>
+            <div style="height:50px; width: 100px; margin-left:10px; color: white;text-align: center;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';" onclick="redirectregistrationpage()">
+                <b>register</b>
+            </div>
+            {% if user.is_authenticated %}
+            <div style="height:50px; width: 100px; margin-left:10px; color: white;text-align: center;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';" onclick="redirectlogoutpage()">
+                <b>logout</b>
+            </div>
+            {% else %}
+            <div style="height:50px; width: 100px; margin-left:10px; color: white;text-align: center;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';" onclick="redirectloginpage()">
+                <b>login</b>
+            </div>
+            {% endif %}
+
+        </nav>
+        <div style="height:45px; width:100%; background-color: rgb(69, 78, 108);" >
+            <div style="height:100%; width:80px;color: white;padding-top:10px; padding-left:10px; float: left; margin-left:20px;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';" >
+                <b>ALL</b>
+            </div>
+            <div style="height:100%; width:80px;color: white;padding-top:10px; padding-left:10px; float: left; margin-left:20px;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';" onclick="redirecthomepage()">
+                <b>Home</b>
+            </div>
+            <div style="height:100%; width:80px;color: white;padding-top:10px; padding-left:10px; float: left;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';">
+                <b>Fresh</b>
+            </div>
+            <div style="height:100%; width:80px;color: white;padding-top:10px; padding-left:10px; float: left;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';" onclick="redirectsellpage()">
+                <b>Sell</b>
+            </div>
+            <div style="height:100%; width:100px;color: white;padding-top:10px; padding-left:10px; float: left;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';" onclick="redirectbestsellerpage()">
+                <b>Best Celler</b>
+            </div>
+            <div style="height:100%; width:100px;color: white;padding-top:10px; padding-left:10px; float: left;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';">
+                <b>Today Deal</b>
+            </div>
+            <div style="height:100%; width:80px;color: white;padding-top:10px; padding-left:10px; float: left;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';">
+                <b>Mobile</b>
+            </div>
+            <div style="height:100%; width:80px;color: white;padding-top:10px; padding-left:10px; float: left;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';">
+                <b>Fashion</b>
+            </div>
+            <div style="height:100%; width:100px;color: white;padding-top:10px; padding-left:10px; float: left;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';">
+                <b>Electronics</b>
+            </div>
+            <div style="height:100%; width:130px;color: white;padding-top:10px; padding-left:10px; float: left;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';">
+                <b>Home&Kitchen</b>
+            </div>
+            <div style="height:100%; width:120px;color: white;padding-top:10px; padding-left:10px; float: left;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';">
+                <b>New Release</b>
+            </div>
+            <div style="height:100%; width:70px;color: white;padding-top:10px; padding-left:10px; float: left;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';" onclick="redirectcartdatapage()">
+                <b>Cart</b>
+            </div>
+            <div style="height:100%; width:100px;color: white;padding-top:10px; padding-left:10px; float: left;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';" onclick="redirectbuydatapage()">
+                <b>Buydata</b>
+            </div>
+            <div style="height:100%; width:100px;color: white;padding-top:10px; padding-left:10px; float: left;" onmouseover="this.style.border='1px solid white';" onmouseout="this.style.border='none';" onclick="redirectaddresspage()">
+                <b>Address</b>
+            </div>
+
+
+    
+            
+
+        </div>
+        <!-- <div style="height:5px; background-color: white;">
+
+        </div> -->
+        <script>
+            function redirecthomepage(){
+        
+            var homeUrl = "{% url 'home' %}";
+            window.location.href = homeUrl;
+            }
+            function redirectsellpage(){
+        
+            var sellUrl = "{% url 'sell' %}";
+            window.location.href = sellUrl;
+            }
+            function redirectloginpage(){
+        
+            var loginUrl = "{% url 'login' %}";
+            window.location.href = loginUrl;
+            }
+
+            function redirectbestsellerpage(){
+                var bestseller = "{% url 'bestseller'%}"
+                window.location.href = bestseller
+            }
+            function redirectregistrationpage(){
+                var registration="{% url 'registration'%}"
+                window.location.href=registration
+            }
+            function redirectcartdatapage(){
+                var cartdata="{% url 'cartdata'%}"
+                window.location.href=cartdata
+            }
+            function redirectbuydatapage(){
+                var buydata = "{% url 'buydata' %}"
+                window.location.href=buydata
+            }
+            function redirectlogoutpage(){
+                var logout = "{% url 'logout' %}"
+                window.location.href=logout
+            }
+
+            function redirectaddresspage(){
+                var address = "{% url 'address' %}"
+                window.location.href=address
+            }
+        </script>
+        
+        
+        {% block body %}
+            
+        {% endblock body%}
+        <div style="height:100%; width:100%; background-color: rgb(58, 57, 57); margin-top:10px;">
+            <div style="height:100%; width:100%;">
+                <div style="height:100%; width:25%; float: left;  text-align: left; padding-top:25px; color: rgb(206, 195, 195); padding-left:20px;">
+                        <h6 style="font-size:20px; color: white;"><b>Get to Know Us</b> </h6>
+                        <h6>About Us</h6>
+                        <h6>Careers</h6>
+                        <h6>Press Releases</h6>
+                        <h6>Amazon Science</h6>
+                </div>
+                <div style="height:100%; width:25%; float: left; text-align:left; padding-top:25px; color: rgb(206, 195, 195); padding-left:20px;">
+                    <h6 style="font-size:20px; color: white;"><b>Connect with Us</b></h6>
+                    <h6>Facebook</h6>
+                    <h6>Twitter</h6>
+                    <h6>Instagram</h6>
+                </div>
+                <div style="height:100%; width:25%; float: left;  text-align:left; padding-top:25px; color: rgb(206, 195, 195); padding-left:20px;">
+                    <h6 style="font-size:20px; color: white;"><b>Make Money with Us</b></h6>
+                    <h6>Sell on Amazon</h6>
+                    <h6>Sell under Amazon Accelerator</h6>
+                    <h6>Protect and Build Your Brand</h6>
+                    <h6>Amazon Global Selling</h6>
+                    <h6 > Become an Affiliate</h6>
+                    <h6>Fulfilment by Amazon</h6>
+                    <h6>Advertise Your Products</h6>
+                    <h6>Amazon Pay on Merchants</h6>
+                </div>
+                <div style="height:100%; width:25%; float: left; text-align:left; padding-top:25px; color: rgb(206, 195, 195); padding-left:20px;">
+                        <h6 style="font-size:20px; color: white;"><b>Let Us Help You</b></h6>
+                        <h6>COVID-19 and Amazon</h6>
+                        <h6>Your Account</h6>
+                        <h6>Returns Centre</h6>
+                        <h6>Recalls and Product Safety Alerts</h6>
+                        <h6>100% Purchase Protection</h6>
+                        <h6>Amazon App Download</h6>
+                        <h6>Help</h6>
+                </div>
+
+            </div>
+        </div>
+        <div style="height:100px; width:100%; background-color: rgb(58, 57, 57);">
+            <center><h6><a href="">copywrite@amazon.com</a></h6></center>
+        </div>
+
+    </body>
+</html>

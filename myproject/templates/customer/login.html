@@ -1,0 +1,64 @@
+{% extends 'master.html' %}
+
+{% block title %}
+    login
+{% endblock title %}
+
+{% block body %}
+<body>
+    <div style="height: 120px; width:100%;">
+        <center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx-N8Kr5wYiTLajPVLlcg7PEgfkyd3qEqZqQ&s" alt="" style="height:100%; width:200px; margin-right:2%;"></center>
+
+    </div>
+    <center><h6 style="background-color: rgb(59, 56, 56); width:50%; color: white; padding-left:-25%; padding-right:-25%;">{% include 'messages.html'%}</h6></center>
+    <div style="height:500px; width:100%;">
+        <center>
+            <div style="height:100%; width:350px; border:1px solid rgb(160, 154, 154); border-radius:20px;">
+                <div style="height:10%; width:100%; ">
+                    <h3 style=" padding:20px; float: left;">Sign in</h3>
+                </div>
+                <div style="height:70%; width: 100%;">
+                    <form action="" method="POST">
+                        
+                        {% csrf_token %}
+                        <label for="username" style="margin-right:175px; margin-top:20px;"><b>Enter a Username</b></label>
+                        <input type="text" id="username" name="username" style="width:300px; border-radius:5px; border:1px solid rgb(133, 123, 123); height:30px; " >
+                        <label for="password" style="margin-right:175px; margin-top:30px;"><b>Enter a Password</b></label>
+                        <input type="password" id="password" name="password" style=" width:300px; border-radius:5px; border:1px solid rgb(133, 123, 123); height:30px;">
+                        <button type="submit" class="btn btn-warning" style="margin-top: 25px; width:300px;">continue</button>
+                        <h6 style="margin-right:20px; margin-top:20px;">By continuing, you agree to Amazon's <a href="" onmouseover="this.style.color='red'" onmouseout="this.style.color='blue'" style="color:blue;">Conditions of Use</a> and <a href="" style="color: blue;" onmouseover="this.style.color='red'" onmouseout="this.style.color='blue'">Privacy Notice.</a></h6>
+                    </form>
+                    <h6><a href="" style="margin-right:63%; color: blue;" onmouseover="this.style.color='red'" onmouseout="this.style.color='blue'">need help</a></h6>
+
+                    <hr width="90%">
+                    <h6 style="margin-right:49%;">Buying for work?</h6>
+                    <h6><a href="" style="margin-right:50%; color: blue;" onmouseover="this.style.color='red'" onmouseout="this.style.color='blue'">Shop on amazon </a></h6>
+
+                </div>
+                
+                
+
+            </div>
+        </center>
+        
+
+    </div>
+    <div style="height:100px;width:100%; text-align: center;">
+        <center><hr style="width:21%; text-align: center;"></center>
+       <h6 style="  color: rgb(133, 123, 123);">New to Amazon</h6>
+       <button type="button" class="btn btn-warning" style=" width:370px; background-color: white; border: 1px solid rgb(139, 128, 128); height:30px;padding:2px;" onclick="redirectregistartionpage()"><a href="{%url 'registration'%}" style="text-decoration: none; color: black;">create your amazon account</a></button>
+    </div>
+    <div style="height:50px; width:100%;">
+        <center><hr style="width:80%;"></center>
+        <center><h6 style="margin-right:20px; margin-top:20px;"><a href="" onmouseover="this.style.color='red'" onmouseout="this.style.color='blue'" style="color:blue;">Conditions of Use</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" style="color: blue;" onmouseover="this.style.color='red'" onmouseout="this.style.color='blue'">Privacy Notice.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" style="color: blue;" onmouseover="this.style.color='red'" onmouseout="this.style.color='blue'">Help.</a></h6></center>
+    </div>
+
+    <script>
+        function redirectregistartionpage(){
+            var register = "{%url 'registration'%}"
+            window.location.href=register
+        }
+    </script>
+</body>
+
+{% endblock body %}

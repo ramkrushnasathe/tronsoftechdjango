@@ -1,0 +1,73 @@
+{% extends 'master.html' %}
+
+{% block title %}
+
+{% endblock title %}
+
+{% block body %}
+<body>
+    <br>
+    <div style="height:100vh; width:100%;">
+        <div style="height:100vh; width:20%; float: left;">
+
+        </div>
+        <div style="height:100vh; width:45%; float: left;">
+            <div style="height:6%; width: 100%;">
+                <h6 style=" font-size:20px; padding:10px; color: red;"><b>Enter a new shipping address</b></h6>
+
+            </div>
+            <div style="height:93%; width: 100%; border: 1px solid rgb(217, 212, 212); border-radius:10px;" >
+                <h6 style=" font-size:20px; padding-left: 40px; margin-top: 10px; "><b>Add new address</b></h6>
+                <center>
+                    <form action="" method="POST">
+                        {% include 'messages.html'%}
+                        {% csrf_token %}
+                        <label for="country" style="float: left; padding-left:40px;" ><b>Country/Region</b></label><br>
+                        <select name="country" id="country" style="width:90%; height:35px; border-radius:10px;margin-bottom: 10px;">
+                            <option value="India">India</option>
+                            <option value="Pakistan">Pakistan</option>
+                            <option value="Japan">Japan</option>
+                        </select><br>
+
+                        <label for="name" style="float: left; padding-left:40px;"><b>Full name (First and Last name)</b></label><br>
+                        <input type="text" id="name" name="name" style="width:90%; height:35px; border-radius:10px; margin-bottom: 10px;"><br>
+
+                        <label for="mobile" style="float: left; padding-left:40px;"><b>Mobile number</b></label><br>
+                        <input type="number" id="mobile" name="mobile" style="width:90%; height:35px; border-radius:10px; margin-bottom: 10px;"><br>
+
+                        <label for="pincode" style="float: left; padding-left:40px;"><b>Pincode</b></label><br>
+                        <input type="number" id="pincode" name="pincode" style="width:90%; height:35px; border-radius:10px; margin-bottom: 10px;"><br>
+
+                        <label for="housename" style="float: left; padding-left:40px;"><b>Flat, House no., Building, Company, Apartment</b></label><br>
+                        <input type="text" id="housename" name="housename" style="width:90%; height:35px; border-radius:10px; margin-bottom: 10px;"><br>
+
+                        <label for=" area" style="float: left; padding-left:40px;"><b>Area, Street, Sector, Village</b></label><br>
+                        <input type="text" id="area" name="area" style="width:90%; height:35px; border-radius:10px; margin-bottom: 10px;"><br>
+
+                        <label for="landmark" style="float: left; padding-left:40px;"><b>Landmark</b></label><br>
+                        <input type="text" id="landmark" name="landmark" style="width:90%; height:35px; border-radius:10px; margin-bottom: 10px;"><br>
+
+                        <label for="city" style="float: left; padding-left:40px;"><b>Town/City</b></label><br>
+                        <input type="text" id="city" name="city" style="width:90%; height:35px; border-radius:10px; margin-bottom: 10px;"><br>
+
+                        <label for="state" style="float: left; padding-left:40px;"><b>State</b></label><br>
+                        <select name="state" id="state" style="width:90%; height:35px; border-radius:10px; margin-bottom: 10px;">
+                            <option value="maharashtra">maharashtra</option>
+                            <option value="gujrat">gujrat</option>
+                            <option value="karnataka">karnataka</option>
+                            <option value="rajasthan">rajasthan</option>
+                            <option value="delhi">delhi</option>
+                        </select>
+                        <button type="submit" class="btn btn-warning" style="border-radius:20px; height:40px; width: 150px; float: left; margin-left: 40px;  background-color:rgba(247, 227, 4, 0.873);"><b>use address</b></button>
+                        
+                    </form>
+                </center>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</body>
+{% endblock body %}

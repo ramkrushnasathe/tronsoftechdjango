@@ -1,0 +1,175 @@
+{% extends 'master.html '%}
+
+
+{% block title %}
+    mobile1
+{%endblock title %}
+
+
+{%block body %}
+<body>
+    
+    <br>
+
+    
+        <div style="height:100vh; width:100%;">
+            <form action="{% url 'cartview' %}" method="POST" >
+                {% csrf_token %}
+                <div style="height:100vh; width:50%; float: left; ">
+                    <img src="https://images-eu.ssl-images-amazon.com/images/I/71-ZHpmFzDL._AC_UL450_SR450,320_.jpg" alt="" style="height:100%; width:100%;">
+                    <input  type="text" name="cartimage" id="cartimage" value="https://images-eu.ssl-images-amazon.com/images/I/71-ZHpmFzDL._AC_UL450_SR450,320_.jpg" style="height:100%; width:100%; display: none;">
+                </div>
+
+
+                <div style="height:100vh; width:25%; float: left;">
+                    <div style="height:40%; width:100%;">
+
+                        <h6 style=" font-size:30px; width:100%; margin-left:10px; "><b>realme NARZO 70 Pro 5G (Glass Green, 8GB RAM,256GB Storage) Dimensity 7050 5G Chipset | Horizon Glass Design | Segment 1st Flagship Sony IMX890 OIS Camera</b><a href="" style="font-size:13px;padding-left: 10px;">see more</a></h6>
+                        <input style="display: none;" type="text" name="cartinfo" id="cartinfo" value="realme NARZO 70 Pro 5G (Glass Green, 8GB RAM,256GB Storage) Dimensity 7050 5G Chipset | Horizon Glass Design | Segment 1st Flagship Sony IMX890 OIS Camera">
+                    </div>
+                    <div style="height:20%; width:100%;">
+                        <hr style="color: black;">
+                        
+
+                        <h3 style="float: left;">-18%</h3> <h3 style="float: left; margin-left:10px;">₹ 21,999.00</h3>
+                        <input type="number" name="cartprice" id="cartprice" value="21999" style="display: none;">
+                        <h5 style="margin-right:25px; float: left; width:100%;">Inclusive Of All Taxes</h5>
+                        
+                    </div>
+
+                    <div style="height:30%; width:100%;">
+                        <hr>
+                        <div style="height: 100%; width:100%; float: left;">
+                            <h5 style="float: left; width:50%;">Brand </h5>	 <h5 style="float: right; width:50%; color: rgb(92, 87, 87);">realme</h5>                      
+                            <h5 style="float: left;width: 50%;">Operating System </h5>	<h5 tyle="float: right;width: 50%;">Android 14 </h5>           
+                            <h5 style="float: left;width: 50%;">RAM Memory</h5>	  <h5 tyle="float: right;width: 50%; color: rgb(92, 87, 87);"> 4 GB </h5>  
+                            <h5 style="float: left;width: 50%;">CPU Model </h5>    <h5 tyle="float: right;width: 50%; color: rgb(92, 87, 87);">MediaTek Helio</h5>
+                            <h5 style="float: left;width: 50%;">Memory Storage</h5> <h5 tyle="float: right;width: 50%; color: rgb(92, 87, 87);">128 GB </h5>
+                            <br><br>	
+                            <button type="submit" class="btn btn-warning" style="width:80%; border-radius: 20px;">Add Cart</button>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </form>
+
+            <div style="height:100vh; width:25%; float: left; padding:50px;">
+                <div style="height:40%; width:80%; border:1px solid rgb(146, 153, 152); border-radius: 20px; background-color: white;">
+                    <h5 style="padding:10px;">FREE delivery</h5>
+                    <a href="" style="text-decoration: none; padding:10px;" onmouseover="this.style.color='red';" onmouseout="this.style.color='blue';">update location-deliver to</a>
+                    <form action="{% url 'buyview' %}" method="POST">
+                        {% csrf_token %}
+                        <input type="text"  name="buyimage" id="buyimage" value="https://images-eu.ssl-images-amazon.com/images/I/71-ZHpmFzDL._AC_UL450_SR450,320_.jpg"  style="display: none;">
+                        <input type="text" name="buyinfo" id="buyinfo" value="realme NARZO 70 Pro 5G (Glass Green, 8GB RAM,256GB Storage) Dimensity 7050 5G Chipset | Horizon Glass Design | Segment 1st Flagship Sony IMX890 OIS Camera" style="display: none;">
+                        <input type="number" name="buyprice" id="buyprice" value="21999" style="display: none;">
+    
+                        <br>
+                        <br>
+                        <center><button type="button" class="btn btn-warning" style="width:80%; border-radius: 20px; background-color: orange;" onclick="redirectaddresspage()">For adding Address</button></center>
+                        <br>
+                        <br>
+                        <center><button type="button" class="btn btn-warning" style="width:80%; border-radius: 20px; background-color: orange;" onclick="redirectcartpage()">Buy now</button></center>
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            
+
+            
+        </div>
+    
+
+
+
+
+
+
+    <!-- <br><br>
+        <div style="height:100vh; width:100%;">
+            <div style="height:100vh; width:50%; float: left; ">
+                <img src="https://images-eu.ssl-images-amazon.com/images/I/61luwQe5iiL._AC_UL450_SR450,320_.jpg" alt="" style="height:100vh; width:100%;">
+                
+
+            </div>
+
+            <div style="height:100vh; width:25%; float: left;">
+                <div style="height:40%; width:100%;">
+
+                
+                    
+                </div>
+                <div style="height:20%; width:100%;">
+                    <hr style="color: black;">
+                    
+                    
+                    <h3 style="float: left;">-18%</h3> <h3 style="float: left; margin-left:10px;">₹ 6,999.00</h3>
+                    <h5 style="margin-right:25px; float: left; width:100%;">Inclusive Of All Taxes</h5>
+                    
+                </div>
+                <div style="height:30%; width:100%;">
+                    <hr>
+                    <div style="height: 100%; width:100%; float: left;">
+                        <h5 style="float: left; width:50%;">Brand </h5>	 <h5 style="float: right; width:50%; color: rgb(92, 87, 87);">realme</h5>                      
+                        <h5 style="float: left;width: 50%;">Operating System </h5>	<h5 tyle="float: right;width: 50%;">Android 14 </h5>           
+                        <h5 style="float: left;width: 50%;">RAM Memory</h5>	  <h5 tyle="float: right;width: 50%; color: rgb(92, 87, 87);"> 4 GB </h5>  
+                        <h5 style="float: left;width: 50%;">CPU Model </h5>    <h5 tyle="float: right;width: 50%; color: rgb(92, 87, 87);">MediaTek Helio</h5>
+                        <h5 style="float: left;width: 50%;">Memory Storage</h5> <h5 tyle="float: right;width: 50%; color: rgb(92, 87, 87);">128 GB </h5>	
+
+                    </div>
+                    <hr>
+                </div>
+        
+
+            </div>
+            <div style="height:100vh; width:25%; float: left; padding:50px;">
+                <div style="height:40%; width:80%; border:1px solid rgb(146, 153, 152); border-radius: 20px; background-color: white;">
+                    <h5 style="padding:10px;">FREE delivery</h5>
+                    <a href="" style="text-decoration: none; padding:10px;" onmouseover="this.style.color='red';" onmouseout="this.style.color='blue';">update location-deliver to</a>
+                    <br>
+                    <br>
+    
+                        <center><button type="button" class="btn btn-warning" style="width:80%; border-radius: 20px;">Add Cart</button>
+                        
+                    <br>
+                    <center><button type="button" class="btn btn-warning" style="width:80%; border-radius: 20px; background-color: orange;" onclick=redirectbuynowpage()>Buy now</button></center>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div style="height:500px; width:100%;">
+            <div style="height: 100%; width:50%; float: left;">
+
+            </div>
+            <div style="height: 100%; width:25%;float: left; ">
+                <div style="height:40%; width:100%;">
+                    <hr>
+                    <h3>About this item</h3>
+                    <p>Segment's most advanced process 6nm flagship process, compared to the 7nm process 6nm transistor density is higher, the corresponding computing efficiency is higher, lower power consumption.More advanced chip process can effectively reduce the power consumption of mobile phones, mobile phone life longer, more smooth experience
+                        Segment's fastest 5G Speed Theoretical download speed：3.27Gbps；Super Network Searching Intelligent identification of LTE strong signal adjacent areas, fast conversion to strong signal areas, effectively reduce the use of weak signals, reduce frequent network searches and modem power consumption</p>
+
+                </div>
+
+            </div>
+
+        </div>-->
+        
+        <script>
+            function redirectaddresspage(){
+                var address = "{% url 'address' %}"
+                window.location.href=address
+            }
+            function redirectcartpage(){
+                var cartdata = "{% url 'cartdata' %}"
+                window.location.href = cartdata
+            }
+        </script>
+    
+</body>
+{%endblock body%}

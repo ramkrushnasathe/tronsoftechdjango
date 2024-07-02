@@ -1,0 +1,79 @@
+{% extends 'master.html'%}
+
+
+{% block title %}
+    cart
+{% endblock title%}
+
+{% block body %}
+<html>
+<head>
+    <title>Cart</title>
+</head>
+<body >
+    <center><h2 style="color:red;font-size:25px; font-weight: bold; margin-top: 10px;">CART DATA</h2></center>
+        {% for item in cartdata %}
+        <div style="min-height: 40%; width:100%; display: flex;flex-direction: column; justify-content: center;align-items: center;  ">
+            <div style="height:300px; width:90%; border: 2px solid rgb(128, 119, 119); border-radius:20px; background-color: rgb(233, 229, 225);">
+                <div style="height:100%; width:50%; float: left; padding:10px;">
+                          <center><img src="{{item.cartimage}}" alt="" style="height:100%; width:60%;border-radius:20px;" ></center>
+                </div>
+                <div style="height:100%; width:50%; float: left; padding:25px; ">
+                    <a href="{% url 'mobile1'%}" style="font-size: 20px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">{{item.cartinfo}}</a>
+                    <h6 style="color: rgb(255, 0, 0); font-size:20px;">{{item.cartprice}}</h6>
+                    <h6  style="color: rgb(255, 0, 0); font-size:20px;">Quantity: {{ item.quantity }}</h6>
+                    <h6  style="color: rgb(255, 0, 0); font-size:20px;">GstAmount: {{ item.gst_amount }}</h6>
+                    <h6  style="color: rgb(255, 0, 0); font-size:20px;">TotalWithoutGst: {{ item.cartprice }}</h6>
+                    <h6  style="color: rgb(255, 0, 0); font-size:20px;">TotalWithGst: {{ item.gst_amount |add:item.cartprice }}</h6>
+
+            
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- <div style="min-height: 100%; width:100%; display: flex;flex-direction: column; float: left; justify-content: center;align-items: center;">
+        <div style="height:50%;width:40%;margin-left: 4%; float: left; border: 1px solid rgb(104, 96, 96); border-radius:20px; padding:10px; background-color: rgb(198, 195, 190);">
+            <div style="height:50%;width:100%;">
+                   <img src="{{item.cartimage}}" alt="" style="height:100%; width:100%;">
+
+            </div>
+            <div style="height: 50%; width:100%;">
+                   <a href="" style="font-size: 15px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">{{item.cartinfo}}</a>
+                    <h6 style="color: rgb(255, 0, 0);">PRICE:{{item.cartprice}}</h6>
+                    
+                    <h6 >Quantity:{{ item.quantity }}</h6>
+                        <h6 >GstAmount:{{ item.gst_amount }}</h6>
+                        <h6 >TotalWithoutGst:{{ item.cartprice }}</h6>
+                        <h6 >TotalWithGst:{{ item.gst_amount |add:item.cartprice }}</h6>
+                    
+            </div>
+
+     </div>
+    </div> -->
+
+            <!-- <li>
+                <p>{{ item.product.name }}</p>
+                <p>Price: {{ item.cartprice }}</p>
+                <p>Quantity: {{ item.quantity }}</p>
+                <p>Total Price: {{ item.total_price }}</p>
+                <p>GST Amount: {{ item.gst_amount }} </p>
+                <p>Total Price Including GST: {{ total_amount_with_gst }}</p>
+            </li> -->
+        {% endfor %}
+
+    <!-- <center>{%include 'messages.html'%}</center> -->
+    <!-- <center><button style="height:60px; width:250px; background-color:rgb(240, 161, 35); border-radius:20px; margin-top:25px;"><a href="{% url 'chekout' %}" style="text-decoration: none; color: black; font-size:20px;">Proceed to Checkout</a></button></center> -->
+    <center><button type="button" class="btn btn-success" style="border-radius:20px; border:1px solid black; "><a href="{% url 'chekout' %}" style="text-decoration: none; color: white; font-size:20px;">Proceed to Checkout</a></button></center>
+</main>
+</body>
+</html>
+
+
+{% endblock body %}

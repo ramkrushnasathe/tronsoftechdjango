@@ -1,0 +1,107 @@
+{% extends 'master.html' %}
+
+{% block title %}
+    chekout
+{% endblock title %}
+
+{% block body %}
+<body>
+    <!-- {%include "messages.html" %} -->
+    <center><h2 style="color:red;font-size:25px; font-weight: bold; margin-top: 10px;">CHEKOUT DATA</h2></center>
+    <center> <h1 style="height:25px; width:40%; font-size:20px;  border-radius:20px; padding:2px;color: black;">{% include "messages.html" %}</h1></center>
+        {% for item in cart_items %}
+        <div style="min-height: 70%; width:100%; display: flex;flex-direction: column; float: left; justify-content: center;align-items: center;">
+            <div style="height:50%;width:40%;margin-left: 4%;  border: 1px solid rgb(104, 96, 96); border-radius:20px; padding:10px; background-color: rgb(198, 195, 190);">
+                <div style="height:50%;width:100%;">
+                       <img src="{{item.cartimage}}" alt="" style="height:70%; width:70%;">
+    
+                </div>
+                <div style="height: 50%; width:100%;">
+                       <a href="" style="font-size: 15px; text-decoration:none; color: blue; " onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">{{item.cartinfo}}</a>
+                        <h6 style="color: rgb(255, 0, 0);">PRICE:   {{item.cartprice}}</h6>
+                        <h6 >Quantity:   {{ item.quantity }}</h6>
+                        <h6 >GstAmount:   {{ item.gst_amount }}</h6>
+                        <h6 >TotalWithoutGst:   {{ item.cartprice }}</h6>
+                        <h6 style="color:  rgb(255, 0, 0);" >TotalWithGst:   {{ item.gst_amount |add:item.cartprice }}</h6>
+                        
+                </div>
+    
+            </div>
+        </div>
+        {% endfor %}
+
+    
+
+
+            <!-- <li>
+                <p>{{ item.cartinfo }}</p>
+                <p>Price: {{ item.cartprice }}</p>
+                <p>Quantity: {{ item.quantity }}</p>
+                <p>Total Price: {{ item.total_price }}</p>
+                <p>GST Amount: {{ item.gst_amount }}</p>
+                <p>Total Price Including GST: {{ item.totalwithgst }}</p>
+            </li>
+        
+    
+    <p>Total Amount: {{ total_amount }}</p>
+    <p>Total Quantity: {{ quantity }}</p>
+    <p>Total Amount Excluding GST: {{ total_amount_excluding_gst }}</p>
+    <p>Total Amount Including GST: {{ total_amount_with_gst }}</p> -->
+    {% for i in customer %}
+    <div style="height:400px; width:100%; float: left; margin-bottom:10px;">
+        <center>
+            
+            <div style="height:100%; width:50%; background-color: white; border:1px solid black;padding:10px; border-radius:10px;">
+                <center><h1>ORDER DETAILS</h1></center>
+                <hr style="color: black; height:2px; ">
+                <h6 style="float: left; width:50%; text-align: left;"><b>c.Name:</b></h6><h6 style="float: left; width:50%; text-align: left;">{{i.name}} </h6>
+                <hr>
+                <h6 style="float: left; width:50%; text-align:left;"><b>c.Address:</b></h6><h6 style="float: left; width:50%; text-align: left;">{{i.housename}} </h6>
+
+                <h6 style="float: left; width:50%; text-align:left;"><b>c.pincode:</b></h6><h6 style="float: left; width:50%; text-align: left;">{{i.pincode}} </h6>
+                
+                <h6 style="float: left; width:50%; text-align: left;"><b>c.mobile:</b></h6><h6 style="float: left; width:50%; text-align: left;">{{i.mobile}}  </h6>
+                
+                <h6 style="float: left; width:50%; text-align: left;"><b>totalquantity:</b></h6><h6 style="float: left; width:50%; text-align: left;">{{quantity}}  </h6>
+                
+                <h6 style="float: left; width:50%; text-align: left;"><b>totalpricewithoutgst:</b></h6><h6 style="float: left; width:50%; text-align: left;">{{totalwithoutgst}}  </h6>
+            
+                <h6 style="float: left; width:50%; text-align: left;color: red;"><b>totalpricewithgst:</b></h6><h6 style="float: left; width:50%; text-align: left;">{{totalwithgst}}  </h6>
+                
+                <form action="{% url 'orderdetails' %}" method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="cname" id="cname" value="{{i.name}}" style="display:none;">
+                    <input type="text" name="caddress" id="caddress" value="{{i.housename}} " style="display:none;">
+                    <input type="text" name="cmobile" id="cmobile" value="{{i.mobile}}" style="display:none;">
+                    <input type="text" name="cpincode" id="cpincode" value="{{i.pincode}}" style="display:none;">
+                    <input type="text" name="cquantity" id="cquantity" value="{{quantity}}" style="display:none;">
+                    <input type="text" name="ctotalwithoutgst" id="ctotalwithoutgst" value="{{totalwithoutgst}}" style="display:none;">
+                    <input type="text" name="ctotalwithgst" id="ctotalwithgst" value="{{totalwithgst}}" style="display:none;">
+                    <button type="submit" style="color:red; margin-top:35px; border-radius:20px; margin-right:40%;">Submit Details</button>
+                </form>
+                
+                
+                
+                
+
+            </div>
+            
+        </center>
+    
+        
+
+    </div>
+    
+    {% endfor %}
+    
+
+    
+        <form method="post">
+            {% csrf_token %}
+            <!-- <button type="submit" style="width:200px; margin-left:45%; background-color:orange; height:50px; border-radius:20px;">Place Order</button> -->
+            <button type="submit" class="btn btn-info" style=" border-radius:20px; border:1px solid black; color: white; margin-left:47%;">Place Order</button>
+        </form>
+    
+</body>
+
+{% endblock body%}

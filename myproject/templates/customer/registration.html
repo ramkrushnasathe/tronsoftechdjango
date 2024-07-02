@@ -1,0 +1,47 @@
+{% extends 'master.html'%}
+
+{% block title %}
+  signup
+
+{% endblock title%}
+
+{% block body %}
+<body>
+    
+
+<center><h6 style="background-color: red; width:50%; color: black; padding-left:-25%; padding-right:-25%; margin-top:25px;">{% include 'messages.html'%}</h6></center>
+    <div style="width: 25%; margin-top: 50px; background-color:white; border:1px solid rgb(80, 76, 76); border-radius:15px;" class="container">
+        <h1 style="color: rgb(96, 80, 80);">Register here</h1>
+        
+        <form method="POST">
+            {% csrf_token %}
+            
+            <div class="mb-3">
+              <label for="fn" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="fn" aria-describedby="emailHelp" name="fn" placeholder="first name">
+            </div>
+            <div class="mb-3">
+                <label for="ln" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="ln" aria-describedby="emailHelp" name="ln" placeholder="Last name">
+            </div>
+            <div class="mb-3">
+                <label for="un" class="form-label">username</label>
+                <input type="text" class="form-control" id="un" aria-describedby="emailHelp" name="un" placeholder="User name">
+            </div>
+            <div class="mb-3">
+                <label for="em" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="em" aria-describedby="emailHelp" name="em" placeholder="Email">
+            </div>
+            <div class="mb-3">
+                <label for="pass" class="form-label">Password</label>
+                <input type="password" class="form-control" id="pass" aria-describedby="emailHelp" name="pass" placeholder="Password">
+            </div>
+            <div class="mb-3">
+                <label for="cpass" class="form-label">C_password</label>
+                <input type="password" class="form-control" id="cpass" aria-describedby="emailHelp" name="cpass" placeholder="C_password">
+            </div>
+            <button type="submit" class="btn btn-success" style="margin-bottom:10px; background-color:orange; height:30px; width:150px; padding-bottom: 30px; border-radius:25px; ">Signup</button >
+          </form>
+    </div>
+</body>
+{% endblock body%}
